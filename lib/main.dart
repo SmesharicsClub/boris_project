@@ -69,13 +69,11 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-class TextWidget extends StatelessWidget
-{
+class TextWidget extends StatelessWidget {
   const TextWidget();
 
 @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     return const Text(
       'Биг бой Абу-Даби — заберу твою суку в Дубаи',
        style: TextStyle (fontSize: 18),
