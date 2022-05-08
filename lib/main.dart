@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() 
-{
+void main() {
   runApp(const MyApp());
 }
 
@@ -13,7 +12,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-
         primarySwatch: Colors.blue,
       ),
       home: const MyHomePage(title: 'Big boy AbuDabi'),
@@ -23,7 +21,6 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
-
 
   final String title;
 
@@ -42,13 +39,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title), centerTitle: true
-      ),
+      appBar: AppBar(title: Text(widget.title), centerTitle: true),
       body: Center(
-
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -72,11 +65,11 @@ class _MyHomePageState extends State<MyHomePage> {
 class TextWidget extends StatelessWidget {
   const TextWidget();
 
-@override
+  @override
   Widget build(BuildContext context) {
     return const Text(
       'Биг бой Абу-Даби — заберу твою суку в Дубаи',
-       style: TextStyle (fontSize: 18),
+      style: TextStyle(fontSize: 18),
     );
   }
 }
