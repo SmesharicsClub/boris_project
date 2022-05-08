@@ -52,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const TextWidget(),
+            ImageWidjet(),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
@@ -68,15 +68,10 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+class  ImageWidjet extends StatelessWidget{
 
-class TextWidget extends StatelessWidget {
-  const TextWidget();
-
-@override
+  @override
   Widget build(BuildContext context) {
-    return const Text(
-      'Биг бой Абу-Даби — заберу твою суку в Дубаи',
-       style: TextStyle (fontSize: 18),
-    );
+    return Image.asset("assets/images/image.png");
   }
 }
