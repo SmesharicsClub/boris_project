@@ -14,9 +14,9 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
 
-        primarySwatch: Colors.grey,
+        primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'My_music'),
+      home: const MyHomePage(title: 'Big boy AbuDabi'),
     );
   }
 }
@@ -44,7 +44,6 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      backgroundColor: Colors.grey[900],
       appBar: AppBar(
         title: Text(widget.title), centerTitle: true
       ),
@@ -53,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const ImageWidget(),
+            const TextWidget(),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
@@ -70,15 +69,14 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-class MusicAssets{
-  static const String buttonPath = "assets/images/image.png";
-}
+class TextWidget extends StatelessWidget {
+  const TextWidget();
 
-class ImageWidget extends StatelessWidget{
-  const ImageWidget({Key? key}):super(key:key);
-
-  @override
+@override
   Widget build(BuildContext context) {
-    return Image.asset(MusicAssets.buttonPath);
+    return const Text(
+      'Биг бой Абу-Даби — заберу твою суку в Дубаи',
+       style: TextStyle (fontSize: 18),
+    );
   }
 }
