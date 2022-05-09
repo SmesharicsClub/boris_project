@@ -8,15 +8,13 @@ class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
+  Widget build(BuildContext context) => MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.grey,
       ),
       home: const MyHomePage(title: 'My_music'),
     );
-  }
 }
 
 class MyHomePage extends StatefulWidget {
@@ -38,8 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
+  Widget build(BuildContext context) => Scaffold(
       backgroundColor: Colors.grey[900],
       appBar: AppBar(title: Text(widget.title), centerTitle: true),
       body: Center(
@@ -60,7 +57,6 @@ class _MyHomePageState extends State<MyHomePage> {
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
-  }
 }
 
 class MusicAssets {
@@ -71,7 +67,5 @@ class ImageWidget extends StatelessWidget {
   const ImageWidget({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return Image.asset(MusicAssets.buttonPath);
-  }
+  Widget build(BuildContext context) => Image.asset(MusicAssets.buttonPath);
 }
