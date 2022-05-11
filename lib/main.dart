@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) => MaterialApp(
         title: 'my_music',
         theme: ThemeData(
-          primarySwatch: Colors.grey,
+          primarySwatch: Colors.red,
         ),
         home: const MyHomePage(title: 'My_music'),
       );
@@ -47,6 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
         centerTitle: true,
+        backgroundColor: Color(0xFF121212),
       ),
       body: ListView.separated(
           padding: EdgeInsets.all(1),
