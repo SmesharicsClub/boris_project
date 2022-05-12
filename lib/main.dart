@@ -9,12 +9,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.grey,
-      ),
-      home: const MyHomePage(title: 'My_music'),
-    );
+        title: 'my_music',
+        theme: ThemeData(
+          primarySwatch: Colors.red,
+        ),
+        home: const MyHomePage(title: 'My_music'),
+      );
 }
 
 class MyHomePage extends StatefulWidget {
@@ -27,40 +27,33 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
+  final containers = [
+    Container(height: 50, color: Colors.red),
+    Container(
+      height: 30,
+      color: Colors.white,
+      child: const Text("Скажи-ка, дядя, ведь не даром..."),
+    ),
+    Container(height: 50, color: Colors.red),
+    Container(
+      color: Colors.white,
+      child: const ImageWidget(),
+    ),
+  ];
 
   @override
   Widget build(BuildContext context) => Scaffold(
       backgroundColor: Colors.grey[900],
-      appBar: AppBar(title: Text(widget.title), centerTitle: true),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const ImageWidget(),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
+      appBar: AppBar(
+        title: Text(widget.title),
+        centerTitle: true,
+        backgroundColor: Color(0xFF121212),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
-}
-
-class MusicAssets {
-  static const String buttonPath = "assets/images/image.png";
+      body: ListView.separated(
+          padding: EdgeInsets.all(1),
+          itemCount: containers.length,
+          itemBuilder: (_, index) => containers[index],
+          separatorBuilder: (_, index) => const SizedBox(height: 5)));
 }
 
 class ImageWidget extends StatelessWidget {
@@ -68,4 +61,8 @@ class ImageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Image.asset(MusicAssets.buttonPath);
+}
+
+class MusicAssets {
+  static const String buttonPath = "assets/images/image.png";
 }
