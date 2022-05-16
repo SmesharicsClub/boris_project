@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'app/constants.dart';
+import 'app/imageWidjet.dart';
 
 void main() {
   runApp(const MyApp());
@@ -54,22 +56,4 @@ class _MyHomePageState extends State<MyHomePage> {
           itemCount: containers.length,
           itemBuilder: (_, index) => containers[index],
           separatorBuilder: (_, index) => const SizedBox(height: 5)));
-}
-
-class ImageWidget extends StatelessWidget {
-  const ImageWidget({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) => Image.asset(MusicAssets.buttonPath);
-}
-
-class MusicAssets {
-  static const String buttonPath = 'assets/images/image.png';
-}
-
-class Constants {
-  static const String title = 'my_music';
-  static const Color backgroundColor = Color(0xFF121212);
-  static const Color thirdContainerBoxDecorationColor = Color(0x4FFD0000);
-  static const String containerText = 'Скажи-ка, дядя, ведь не даром...';
 }
