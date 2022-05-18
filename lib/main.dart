@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'app/constants.dart';
-import 'app/imageWidjet.dart';
+import 'app/image_widget.dart';
 
 void main() {
   runApp(const MyApp());
