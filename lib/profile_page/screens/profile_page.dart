@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-const Color appBarBackgroundColor = Color(0xFF121212);
-const String imagefoto = r'http://risovach.ru/upload/2017/12/mem/gey-flag_164992799_orig_.jpg';
+const Color _appBarBackgroundColor = Color(0xFF121212);
+const String _imagefoto = r'http://risovach.ru/upload/2017/12/mem/gey-flag_164992799_orig_.jpg';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage ({required this.title, Key? key}) : super(key: key);
@@ -18,7 +18,7 @@ class ProfilePage extends StatelessWidget {
   ),
       body: Container(
         alignment: Alignment.center,
-        child: Image.network(imagefoto),
+        child: Image.network(_imagefoto),
       ));
 }
 
